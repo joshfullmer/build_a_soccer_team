@@ -21,11 +21,8 @@ def create_teams(team_names, players):
 
     Evenly distributes the players by experience and ensures equal team size.
     """
-    teams = {}
-
     # Create empty lists to house players, one for each team.
-    for team in team_names:
-        teams[team] = []
+    teams = {team: [] for team in team_names}
 
     team_num = 0
     team_max_index = len(team_names) - 1
@@ -113,4 +110,4 @@ if __name__ == '__main__':
 
     write_roster(teams, 'teams.txt')
 
-    write_letters(teams, 'more_letters')
+    write_letters(teams, 'letters')
